@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <form [formGroup]= "CreateAppointment" (ngSubmit) = "onSubmit()">
+      <div class="row">
+        <div class="col-25">
+          <label for="name">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" placeholder="Your name.." formControlName = "name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="date">Appointment Date</label>
+        </div>
+        <div class="col-75">
+          <input type="date" id="date" name="date" placeholder="Your Date.." formControlName = "appointmentDate">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="description">Description</label>
+        </div>
+         <div class="col-75">
+            <textarea name="description" id="" cols="30" rows="10" formControlName = "description"></textarea>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" value="Make Appointment">
+      </div>
+    </form>
+  </div>

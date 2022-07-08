@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <h2>Customer List</h2>
+    <div class="table-responsive">          
+    <table class="table">
+      <thead>
+        <tr>
+            <th>ID</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let cst of customer; let x = index" class="info">
+          <td scope = "row">{{x+1}}</td>
+          <td>{{cst.name}}</td>
+          <td>{{cst.email}}</td>
+          <td>{{cst.phone}}</td>
+          <td>
+            <button (click) = "updateCustomer(cst.id)" ><i class="fa fa-edit"></i></button>
+            <button (click) = "deleteCustomer(cst.id)" ><i class="fa fa-trash"></i></button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  
+  
+  
+  

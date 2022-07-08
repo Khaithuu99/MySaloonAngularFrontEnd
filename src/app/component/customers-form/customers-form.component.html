@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <form [formGroup]= "CreateCustomer" (ngSubmit) = "onSubmit()">
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Full Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="name" name="name" placeholder="Your name.." formControlName = "name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="email" name="email" placeholder="Your email.." formControlName = "email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="phone">Phone Number</label>
+        </div>
+        <div class="col-75">
+          <input type="phone" id="phone" name="phone" placeholder="Your phone number.." formControlName = "phone">
+        </div>
+      </div>
+      <div class="row">
+       <button type="submit" name="submit">submit</button>
+      </div>
+    </form>
+  </div>

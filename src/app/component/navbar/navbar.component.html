@@ -1,0 +1,14 @@
+<!-- The sidebar -->
+<div class="sidebar">
+    <a [routerLink]="['navbar']" >Home</a>
+    <a [routerLink]="['orders/orders-list']">Appointment</a>
+    <a [routerLink]="['services/services-list']">Services</a>
+    <a [routerLink]="['customers/customers-list']">Customers</a>
+    <a [routerLink]="['emails']">Emails</a>
+
+  </div>
+  
+  <!-- Page content -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>

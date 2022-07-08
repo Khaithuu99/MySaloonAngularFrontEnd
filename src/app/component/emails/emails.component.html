@@ -1,0 +1,15 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Email</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let cst of customer; let x = index" class="info">
+        <td scope = "row">{{x+1}}</td>
+    
+        <td>{{cst.email}}</td>
+      </tr>
+    </tbody>
+  </table>

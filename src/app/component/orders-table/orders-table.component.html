@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <h2>Appointment List</h2>
+    <div class="table-responsive">          
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Full Name</th>
+          <th>Appointment Date</th>
+          <th>Discription</th>
+          <th>Action</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr class="success"*ngFor = "let apt of appointment; let x = index">
+            <td scope = "row">{{x+1}}</td>
+            <td>{{apt.name}}</td>
+            <td>{{apt.appointmentDate}}</td>
+            <td>{{apt.description}}</td>
+            <td>
+            <button (click) = "updateAppointment(apt.id)"><i class="fa fa-edit"></i></button>
+            <button (click) = "deleteAppointment(apt.id)"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  
+  
+  
